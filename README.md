@@ -1,6 +1,6 @@
-# Slides Skill for Kiro
+# Slides Skill
 
-A [Kiro](https://kiro.dev) skill that generates interactive HTML slide presentations from any template or design system.
+An AI coding skill that generates interactive HTML slide presentations from any template or design system.
 
 ## Features
 
@@ -17,9 +17,53 @@ A [Kiro](https://kiro.dev) skill that generates interactive HTML slide presentat
 
 ## Install
 
+### Kiro
+
 ```bash
 git clone https://github.com/kandmgawron/presentations.git ~/.kiro/skills/slides
 ```
+
+The skill activates automatically when you ask Kiro to create or edit a presentation.
+
+### Claude Code (claude-code / claude CLI)
+
+Add the `SKILL.md` as a CLAUDE.md file in your project, or reference it in your prompt:
+
+```bash
+# Option 1: Copy into your project
+git clone https://github.com/kandmgawron/presentations.git /tmp/slides-skill
+cp /tmp/slides-skill/SKILL.md ./CLAUDE.md
+cp /tmp/slides-skill/html-template.md ./html-template.md
+cp -r /tmp/slides-skill/assets ./assets
+
+# Option 2: Reference directly in your prompt
+claude "Read /tmp/slides-skill/SKILL.md and create a presentation about [topic]"
+```
+
+### GitHub Copilot
+
+Add the skill files to your project's `.github/copilot-instructions.md` or reference them as context:
+
+```bash
+# Copy into your project
+git clone https://github.com/kandmgawron/presentations.git /tmp/slides-skill
+cp /tmp/slides-skill/SKILL.md ./.github/copilot-instructions.md
+cp /tmp/slides-skill/html-template.md ./html-template.md
+cp -r /tmp/slides-skill/assets ./assets
+```
+
+Or in Copilot Chat, attach the `SKILL.md` and `html-template.md` files as context and ask it to generate slides.
+
+### Any AI Coding Tool
+
+The skill is just markdown files — it works with any AI tool that accepts instructions:
+
+1. Clone this repo
+2. Feed `SKILL.md` as system instructions or context
+3. Feed `html-template.md` as the template reference
+4. Ask it to generate a presentation
+
+The `SKILL.md` contains all the patterns, conventions, and code examples the AI needs.
 
 ## Usage
 
