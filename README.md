@@ -40,19 +40,9 @@ cp -r /tmp/slides-skill/assets ./assets
 claude "Read /tmp/slides-skill/SKILL.md and create a presentation about [topic]"
 ```
 
-### GitHub Copilot
+### Microsoft Copilot
 
-Add the skill files to your project's `.github/copilot-instructions.md` or reference them as context:
-
-```bash
-# Copy into your project
-git clone https://github.com/kandmgawron/presentations.git /tmp/slides-skill
-cp /tmp/slides-skill/SKILL.md ./.github/copilot-instructions.md
-cp /tmp/slides-skill/html-template.md ./html-template.md
-cp -r /tmp/slides-skill/assets ./assets
-```
-
-Or in Copilot Chat, attach the `SKILL.md` and `html-template.md` files as context and ask it to generate slides.
+Paste the contents of `SKILL.md` and `html-template.md` into your Copilot conversation as context, then ask it to generate slides. For best results, paste `SKILL.md` first as instructions, then `html-template.md` as the template reference.
 
 ### Any AI Coding Tool
 
